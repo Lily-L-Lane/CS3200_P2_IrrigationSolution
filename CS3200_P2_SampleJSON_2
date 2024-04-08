@@ -1,0 +1,36 @@
+{
+    "solution_id": "PK",
+    "insight_id": {
+      "insight_id": "PK",
+      "insights": "BLOB",
+      "analyst_id": "FK",
+      "solution_id": "FK"
+    },
+    "visualization_id": {
+      "visualization_id": "PK",
+      "image": "*artFile",
+      "algorithm_id": "PK",
+      "analyst_id": {
+        "analyst_id": "PK",
+        "concentration": "TEXT",
+        "engineer_id": "FK",
+        "specialist_id": "FK"
+      }
+    },
+    "information": "BLOB",
+    "user_id": {
+      "user_id": "PK",
+      "firstName": "VARCHAR",
+      "lastName": "VARCHAR",
+      "IP_address": "VARCHAR",
+      "email": "VARCHAR",
+      "phone": "VARCHAR",
+      "userType": {
+        "farmer_id": "",
+        "manager_id": "",
+        "organization_id": ""
+      },
+      "farm_id": "FK"
+    }
+  }
+  

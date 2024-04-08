@@ -1,0 +1,48 @@
+{
+    "farm_id": "PK",
+    "factors_id": {
+      "factors_id": "PK",
+      "coverage_id": {
+        "coverage_id": "PK",
+        "inchesOfRain": "NUMBER",
+        "location": "coordinates"
+      },
+      "moisture_id": {
+        "moisture_id": "PK",
+        "waterSaturation": "NUMBER"
+      },
+      "humidity_id": {
+        "humidity_id": "PK",
+        "humidity": "NUMBER"
+      },
+      "time": "NUMBER"
+    },
+    "region_id": {
+      "region_id": "PK",
+      "soilType_id": {
+        "soil_id": "PK",
+        "type": "TEXT"
+      },
+      "climate_id": {
+        "climate_id": "PK",
+        "data": "VARCHAR"
+      },
+      "location": "coordinates"
+    },
+    "crop_id": {
+      "crop_id": "PK",
+      "Name": "VARCHAR",
+      "Requirements": "BLOB",
+      "health_id": {
+        "health_id": "PK",
+        "diseases": "TEXT",
+        "health": "BLOB"
+      },
+      "yield_id": {
+        "yield_id": "PK",
+        "yield": "NUMBER"
+      },
+      "location": "coordinates"
+    }
+  }
+  
