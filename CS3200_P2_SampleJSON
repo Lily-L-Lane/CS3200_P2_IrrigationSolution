@@ -1,5 +1,40 @@
 {
     "farm_id": "1",
+    "solution_id": {
+      "solution_id": "1",
+      "insight_id": {
+        "insight_id": "1",
+        "insights": "Maximize irrigation in the south region",
+        "analyst_id": "1",
+        "solution_id": "1"
+      },
+      "visualization_id": {
+        "visualization_id": "1",
+        "image": "*artFile",
+        "algorithm_id": "1",
+        "analyst_id": {
+          "analyst_id": "1",
+          "concentration": "Environmental Engineering",
+          "engineer_id": "1",
+          "specialist_id": "1"
+        }
+      },
+      "information": "BLOB",
+      "user_id": {
+        "user_id": "1",
+        "firstName": "Mario",
+        "lastName": "Luigi",
+        "IP_address": "123099",
+        "email": "mario.lu@northeastern.edu",
+        "phone": "341-778-9087",
+        "userType": {
+          "farmer_id": "1",
+          "manager_id": "",
+          "organization_id": ""
+        },
+        "farm_id": "1"
+      }
+    },
     "factors_id": {
       "factors_id": "1",
       "coverage_id": {
