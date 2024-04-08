@@ -1,46 +1,46 @@
 {
-    "farm_id": "PK",
+    "farm_id": "1",
     "factors_id": {
-      "factors_id": "PK",
+      "factors_id": "1",
       "coverage_id": {
-        "coverage_id": "PK",
-        "inchesOfRain": "NUMBER",
+        "coverage_id": "1",
+        "inchesOfRain": "4",
         "location": "coordinates"
       },
       "moisture_id": {
-        "moisture_id": "PK",
-        "waterSaturation": "NUMBER"
+        "moisture_id": "1",
+        "waterSaturation": "5"
       },
       "humidity_id": {
-        "humidity_id": "PK",
-        "humidity": "NUMBER"
+        "humidity_id": "1",
+        "humidity": "5"
       },
-      "time": "NUMBER"
+      "time": "22:33"
     },
     "region_id": {
-      "region_id": "PK",
+      "region_id": "1",
       "soilType_id": {
-        "soil_id": "PK",
-        "type": "TEXT"
+        "soil_id": "1",
+        "type": "silt"
       },
       "climate_id": {
-        "climate_id": "PK",
-        "data": "VARCHAR"
+        "climate_id": "1",
+        "data": "high cloud coverage"
       },
       "location": "coordinates"
     },
     "crop_id": {
-      "crop_id": "PK",
-      "Name": "VARCHAR",
+      "crop_id": "1",
+      "Name": "Wheat",
       "Requirements": "BLOB",
       "health_id": {
-        "health_id": "PK",
-        "diseases": "TEXT",
+        "health_id": "1",
+        "diseases": "blight",
         "health": "BLOB"
       },
       "yield_id": {
-        "yield_id": "PK",
-        "yield": "NUMBER"
+        "yield_id": "1",
+        "yield": "200"
       },
       "location": "coordinates"
     }
