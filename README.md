@@ -1,0 +1,1 @@
+For the main portion: the UML, ERD, and documents are labeled. Anything labled "CS3200_P2_Q(number)" are my respective queries in order. I also included my json document database. The app.js, index.js, index.html, and package.json are part of the extra credit portion.
