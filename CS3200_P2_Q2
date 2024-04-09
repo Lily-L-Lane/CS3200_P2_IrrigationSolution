@@ -1,0 +1,31 @@
+import { MongoClient } from 'mongodb';
+
+/*
+ * Requires the MongoDB Node.js Driver
+ * https://mongodb.github.io/node-mongodb-native
+ */
+//Complex logical connector query: returns farms that have the soilType "silt", has humidity of less than 0.2, and waterSaturation of less than 0.3
+
+const filter = {
+  '$and': [
+    {
+      'region_id.soilType_id.type': 'silt'
+    }, {
+      'factors_id.humidity_id.humidity': {
+        '$lt': 0.2
+      }
+    }, {
+      'factors_id.moisture_id.waterSaturation': {
+        '$lt': 0.3
+      }
+    }
+  ]
+};
+
+const client = await MongoClient.connect(
+  'mongodb://localhost:27017/'
+);
+const coll = client.db('CS3200_P2_IrrigationSolutions').collection('IrrigationSolutions');
+const cursor = coll.find(filter);
+const result = await cursor.toArray();
+await client.close();

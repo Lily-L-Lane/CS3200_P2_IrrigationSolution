@@ -1,0 +1,51 @@
+import { MongoClient } from 'mongodb';
+
+/*
+ * Requires the MongoDB Node.js Driver
+ * https://mongodb.github.io/node-mongodb-native
+ */
+//Averages: Returns the average loction, humdity, and waterSaturation of each disease
+
+const agg = [
+  {
+    '$group': {
+      '_id': '$crop_id.health_id.diseases', 
+      'farms': {
+        '$push': '$farm_id'
+      }, 
+      'avgLocation': {
+        '$avg': '$crop_id.location'
+      }, 
+      'avgHumidity': {
+        '$avg': '$factors_id.humidity_id.humidity'
+      }, 
+      'avgWaterSaturation': {
+        '$avg': '$factors_id.moisture_id.waterSaturation'
+      }
+    }
+  }, {
+    '$group': {
+      '_id': '$_id', 
+      'farms': {
+        '$first': '$farms'
+      }, 
+      'avgLocation': {
+        '$first': '$avgLocation'
+      }, 
+      'avgHumidity': {
+        '$first': '$avgHumidity'
+      }, 
+      'avgWaterSaturation': {
+        '$first': '$avgWaterSaturation'
+      }
+    }
+  }
+];
+
+const client = await MongoClient.connect(
+  'mongodb://localhost:27017/'
+);
+const coll = client.db('CS3200_P2_IrrigationSolutions').collection('IrrigationSolutions');
+const cursor = coll.aggregate(agg);
+const result = await cursor.toArray();
+await client.close();
